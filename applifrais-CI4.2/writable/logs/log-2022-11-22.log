@@ -1,0 +1,93 @@
+CRITICAL - 2022-11-22 14:51:07 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-22 14:51:07 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-22 14:52:21 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2022-11-22 07:52:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'gsb_frais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'gsb_frais', 3306, '', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'gsb_frais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-22 07:52:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'gsb_frais'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur.id as id, visiteur.nom as nom, visiteur.prenom as prenom 
+				from visiteur 
+				where visiteur.login=? and visiteur.mdp=?', [...])
+ 3 APPPATH\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+ 4 APPPATH\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-22 07:59:26 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'applisfrais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'applisfrais', 3306, '', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'applisfrais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-22 07:59:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'applisfrais'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur.id as id, visiteur.nom as nom, visiteur.prenom as prenom 
+				from visiteur 
+				where visiteur.login=? and visiteur.mdp=?', [...])
+ 3 APPPATH\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('applifrais', 'applifrais')
+ 4 APPPATH\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('applifrais', 'applifrais')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

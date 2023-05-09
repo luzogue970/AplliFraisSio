@@ -1,0 +1,396 @@
+CRITICAL - 2023-05-03 02:30:12 --> mysqli::query(): Empty query
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::query(): Empty query', 'SYSTEMPATH\\Database\\MySQLi\\Connection.php', 292, [...])
+ 2 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('ROOTPATH\\public', 0)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('ROOTPATH\\public')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('ROOTPATH\\public')
+ 5 APPPATH\Models\DataAccess.php(297): CodeIgniter\Database\BaseConnection->query('ROOTPATH\\public')
+ 6 APPPATH\Models\ActionsVisiteur.php(48): App\Models\DataAccess->getFiches('a17')
+ 7 APPPATH\Controllers\Visiteur.php(60): App\Models\ActionsVisiteur->getLesFichesDuVisiteur('a17')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->mesFiches()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 02:30:28 --> mysqli::query(): Empty query
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::query(): Empty query', 'SYSTEMPATH\\Database\\MySQLi\\Connection.php', 292, [...])
+ 2 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('ROOTPATH\\public', 0)
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('ROOTPATH\\public')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('ROOTPATH\\public')
+ 5 APPPATH\Models\DataAccess.php(297): CodeIgniter\Database\BaseConnection->query('ROOTPATH\\public')
+ 6 APPPATH\Models\ActionsVisiteur.php(48): App\Models\DataAccess->getFiches('a17')
+ 7 APPPATH\Controllers\Visiteur.php(60): App\Models\ActionsVisiteur->getLesFichesDuVisiteur('a17')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->mesFiches()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 02:30:30 --> Undefined index: mois
+in APPPATH\Views\v_visiteurMesFiches.php on line 34.
+ 1 APPPATH\Views\v_visiteurMesFiches.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mois', 'APPPATH\\Views\\v_visiteurMesFiches.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_visiteurMesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteurMesFiches', [], true)
+ 5 APPPATH\Controllers\Visiteur.php(63): view('v_visiteurMesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->mesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 02:33:54 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(42): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Visiteur.php(68): App\Controllers\Visiteur->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->seDeconnecter()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 02:33:57 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(42): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Visiteur.php(49): App\Controllers\Visiteur->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:10:18 --> Undefined variable: message
+in APPPATH\Views\l_visiteur.php on line 29.
+ 1 APPPATH\Views\l_visiteur.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'APPPATH\\Views\\l_visiteur.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\l_visiteur.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_visiteur', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteurAccueil', [], true)
+ 6 APPPATH\Controllers\Visiteur.php(53): view('v_visiteurAccueil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:12:35 --> Too few arguments to function App\Controllers\Visiteur::voirMaFiche(), 0 passed in P:\Documents\TAFF\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Visiteur.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->voirMaFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:12:48 --> Too few arguments to function App\Controllers\Visiteur::voirMaFiche(), 0 passed in P:\Documents\TAFF\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Visiteur.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->voirMaFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:23:47 --> Invalid file: v_visiteur/v_visiteurAccueil.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_visiteur/v_visiteurAccueil.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:24:23 --> Invalid file: v_visiteurAccueil.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_visiteurAccueil.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteurAccueil', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(53): view('v_visiteurAccueil', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:25:40 --> Invalid file: l_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('l_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:26:23 --> Invalid file: l_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('l_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:29:37 --> Invalid file: l_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('l_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:34:26 --> Invalid file: v_comptable/_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('v_comptable/_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableAccueil', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(53): view('v_comptable/v_comptableAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:34:28 --> Invalid file: v_comptable/_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('v_comptable/_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableAccueil', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(53): view('v_comptable/v_comptableAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:35:00 --> Invalid file: l_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('l_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurMesFiches', [], true)
+ 4 APPPATH\Controllers\Visiteur.php(63): view('v_visiteur/v_visiteurMesFiches', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->mesFiches()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:37:46 --> Invalid file: v_comptable/_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('v_comptable/_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableAccueil', [], true)
+ 4 APPPATH\Controllers\Comptable.php(53): view('v_comptable/v_comptableAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:46:36 --> Invalid file: /comptable.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/comptable.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/comptable', [], true)
+ 3 APPPATH\Controllers\Anonyme.php(15): view('/comptable', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:46:52 --> Invalid file: /comptable.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/comptable.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/comptable', [], true)
+ 3 APPPATH\Controllers\Anonyme.php(15): view('/comptable', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:59:14 --> Invalid file: v_comptable/_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('v_comptable/_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableAccueil', [], true)
+ 4 APPPATH\Controllers\Comptable.php(53): view('v_comptable/v_comptableAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 03:59:14 --> Invalid file: v_comptable/_visiteur.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/_visiteur.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('v_comptable/_visiteur', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableAccueil', [], true)
+ 4 APPPATH\Controllers\Comptable.php(53): view('v_comptable/v_comptableAccueil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:09:42 --> Undefined variable: statut
+in APPPATH\Models\Authentif.php on line 40.
+ 1 APPPATH\Models\Authentif.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statut', 'APPPATH\\Models\\Authentif.php', 40, [...])
+ 2 APPPATH\Controllers\Anonyme.php(42): App\Models\Authentif->connecter('a17', 'Andre', 'David')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:13:09 --> Undefined variable: statut
+in APPPATH\Models\Authentif.php on line 40.
+ 1 APPPATH\Models\Authentif.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statut', 'APPPATH\\Models\\Authentif.php', 40, [...])
+ 2 APPPATH\Controllers\Anonyme.php(42): App\Models\Authentif->connecter('a17', 'Andre', 'David', '0')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:15:17 --> Undefined variable: statut
+in APPPATH\Views\l_comptable.php on line 29.
+ 1 APPPATH\Views\l_comptable.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statut', 'APPPATH\\Views\\l_comptable.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\l_comptable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_comptable', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 6 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:36:40 --> Undefined variable: identite
+in APPPATH\Views\l_comptable.php on line 29.
+ 1 APPPATH\Views\l_comptable.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: identite', 'APPPATH\\Views\\l_comptable.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\l_comptable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('l_comptable', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_visiteur/v_visiteurAccueil', [], true)
+ 6 APPPATH\Controllers\Visiteur.php(53): view('v_visiteur/v_visiteurAccueil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:58:30 --> Cannot use object of type App\Models\Authentif as array
+in APPPATH\Controllers\Anonyme.php on line 16.
+ 1 APPPATH\Controllers\Anonyme.php(43): App\Controllers\Anonyme->index()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 04:58:33 --> Cannot use object of type App\Models\Authentif as array
+in APPPATH\Controllers\Anonyme.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:07:52 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Anonyme.php(16): CodeIgniter\Model->__call('estComptable', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:19:54 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 APPPATH\Controllers\Anonyme.php(45): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:20:08 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:20:14 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:21:26 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:21:30 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:21:30 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:07 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:10 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:12 --> Object of class App\Models\Authentif could not be converted to string
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:29 --> Call to undefined function App\Models\get()
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:32 --> Call to undefined function App\Models\get()
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:33 --> Call to undefined function App\Models\get()
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:33 --> Call to undefined function App\Models\get()
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:22:38 --> Call to undefined function App\Models\get()
+in APPPATH\Models\Authentif.php on line 28.
+ 1 APPPATH\Controllers\Anonyme.php(16): App\Models\Authentif->estComptable()
+ 2 APPPATH\Controllers\Anonyme.php(45): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 06:26:40 --> Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP)
+in APPPATH\Controllers\Anonyme.php on line 21.
+ 1 APPPATH\Controllers\Anonyme.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant console - assumed \'console\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Controllers\\Anonyme.php', 21, [...])
+ 2 APPPATH\Controllers\Anonyme.php(47): App\Controllers\Anonyme->index()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 07:18:36 --> Invalid file: v_comptable/v_comptableMesFiches.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_comptable/v_comptableMesFiches.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/v_comptableMesFiches', [], true)
+ 3 APPPATH\Controllers\Comptable.php(63): view('v_comptable/v_comptableMesFiches', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->mesFiches()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-03 07:18:48 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(42): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Visiteur.php(49): App\Controllers\Visiteur->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

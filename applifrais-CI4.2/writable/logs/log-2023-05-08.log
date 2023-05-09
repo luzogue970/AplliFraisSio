@@ -1,0 +1,755 @@
+CRITICAL - 2023-05-08 00:35:57 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:37:51 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 00:40:29 --> mysqli_sql_exception: Unknown column 'fichreFrais.comment' in 'field list' in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('select ficheFra...', 0)
+#1 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('select ficheFra...')
+#2 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('select ficheFra...')
+#3 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\app\Models\DataAccess.php(271): CodeIgniter\Database\BaseConnection->query('select ficheFra...')
+#4 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\app\Models\DataAccess.php(373): App\Models\DataAccess->getLesInfosFicheFrais('202211', 'c14')
+#5 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\app\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+#6 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\app\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+#7 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+#8 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+#9 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-08 00:40:29 --> Unknown column 'fichreFrais.comment' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, 
+					ficheFrais.nbJustificatifs as nbJustificatifs, ficheFrais.montantValide as montantValide, etat.libelle as libEtat, fichreFrais.comment as comment 
+				from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+				where fichefrais.idvisiteur =\'202211\' and fichefrais.mois = \'c14\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, 
+					ficheFrais.nbJustificatifs as nbJustificatifs, ficheFrais.montantValide as montantValide, etat.libelle as libEtat, fichreFrais.comment as comment 
+				from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+				where fichefrais.idvisiteur =\'202211\' and fichefrais.mois = \'c14\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, 
+					ficheFrais.nbJustificatifs as nbJustificatifs, ficheFrais.montantValide as montantValide, etat.libelle as libEtat, fichreFrais.comment as comment 
+				from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+				where fichefrais.idvisiteur =\'202211\' and fichefrais.mois = \'c14\'')
+ 4 APPPATH\Models\DataAccess.php(271): CodeIgniter\Database\BaseConnection->query('select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, 
+					ficheFrais.nbJustificatifs as nbJustificatifs, ficheFrais.montantValide as montantValide, etat.libelle as libEtat, fichreFrais.comment as comment 
+				from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+				where fichefrais.idvisiteur =\'202211\' and fichefrais.mois = \'c14\'')
+ 5 APPPATH\Models\DataAccess.php(373): App\Models\DataAccess->getLesInfosFicheFrais('202211', 'c14')
+ 6 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 7 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:41:31 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:44:49 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:45:15 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:45:56 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:46:20 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:47:19 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:48:06 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:49:49 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:49:58 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:50:04 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:50:44 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:52:11 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14', 'a')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14', 'a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:52:44 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:54:13 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:54:38 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:54:49 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:54:55 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 00:56:02 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\ActionsComptable.php(85): CodeIgniter\Model->__call('refuserFicheFsrais', [...])
+ 4 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:01:14 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:07:31 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:09:26 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:10:15 --> Too few arguments to function App\Controllers\Comptable::validerFiche(), 0 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\Comptable.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->validerFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:10:40 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:12:22 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\ActionsComptable.php(86): CodeIgniter\Model->__call('lesFiches', [...])
+ 4 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:12:30 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\ActionsComptable.php(86): CodeIgniter\Model->__call('lesFiches', [...])
+ 4 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:13:14 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:13:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\ActionsComptable.php(86): CodeIgniter\Model->__call('lesFiches', [...])
+ 4 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:13:52 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:15:15 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:18:00 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:18:09 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:19:37 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(93): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:21:09 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:21:30 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 375.
+ 1 APPPATH\Models\DataAccess.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 375)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202211', 'c14')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202211', 'c14')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'c14')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:23:10 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 373.
+ 1 APPPATH\Models\DataAccess.php(373): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 373)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:31:39 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 373.
+ 1 APPPATH\Models\DataAccess.php(373): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 373)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:32:55 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 373.
+ 1 APPPATH\Models\DataAccess.php(373): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 373)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:39:48 --> Undefined variable $moisS
+in APPPATH\Models\DataAccess.php on line 374.
+ 1 APPPATH\Models\DataAccess.php(374): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $moisS', 'APPPATH\\Models\\DataAccess.php', 374)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('202301', 'a131')
+ 3 APPPATH\Controllers\Comptable.php(91): App\Models\ActionsComptable->refuserFiche('202301', 'a131')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202301', 'a131')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:50:15 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202212', 'a131')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:50:56 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202212', 'a131')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:54:54 --> Trying to access array offset on value of type null
+in APPPATH\Models\DataAccess.php on line 373.
+ 1 APPPATH\Models\DataAccess.php(373): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\DataAccess.php', 373)
+ 2 APPPATH\Models\ActionsComptable.php(85): App\Models\DataAccess->refuserFicheFrais('action.php', '202211', 'test')
+ 3 APPPATH\Controllers\Comptable.php(92): App\Models\ActionsComptable->refuserFiche('action.php', '202211', 'test')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'action.php')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:57:23 --> Undefined variable $var
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 26.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 APPPATH\Controllers\Comptable.php(94): App\Controllers\Comptable->lesFiches('La fiche 202211 a été refusé pour le motif test')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202211', 'a55')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:58:32 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:59:44 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 02:02:13 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:26:10 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(46): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:26:28 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(46): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:26:30 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(46): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:26:39 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(46): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:27:23 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:30:34 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:30:47 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 0 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:32:25 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:33:59 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:34:49 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:36:07 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:43:01 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 30.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:43:26 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 30.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:49:26 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 23.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 APPPATH\Controllers\Comptable.php(93): App\Controllers\Comptable->lesFiches('La fiche 202305 a été refusé pour le motif aaa')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17', 'aaa')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:51:55 --> Undefined variable $comment
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 30.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comment', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:52:12 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 46.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:53:59 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 0 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:54:35 --> Undefined array key "comment"
+in APPPATH\Controllers\Comptable.php on line 92.
+ 1 APPPATH\Controllers\Comptable.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Controllers\\Comptable.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:55:22 --> Undefined array key "comment"
+in APPPATH\Controllers\Comptable.php on line 92.
+ 1 APPPATH\Controllers\Comptable.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Controllers\\Comptable.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:55:53 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 0 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:32:56 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(55): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:33:10 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(46): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:33:31 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Comptable.php(39): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Comptable.php(55): App\Controllers\Comptable->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:36:34 --> Undefined array key "comment"
+in APPPATH\Controllers\Comptable.php on line 92.
+ 1 APPPATH\Controllers\Comptable.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Controllers\\Comptable.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17', 'aaaaa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:37:10 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 30.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:37:31 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 30.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:37:49 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 33.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:38:18 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 33.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:38:24 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 33.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(60): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:41:20 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:53:35 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 09:55:08 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 10:00:40 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 10:13:43 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 10:14:24 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 10:16:25 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 10:16:59 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 2 passed in D:\nouveauMathieu\dev\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche('202305', 'a17')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

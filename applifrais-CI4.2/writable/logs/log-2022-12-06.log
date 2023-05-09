@@ -1,0 +1,424 @@
+ERROR - 2022-12-06 06:30:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'applifrais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'applifrais', 3306, '', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('lvillachane', 'jux7g')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('lvillachane', 'jux7g')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'applifrais' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur...', Array)
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('lvillachane', 'jux7g')
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('lvillachane', 'jux7g')
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 06:30:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'applifrais'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\DataAccess.php(31): CodeIgniter\Database\BaseConnection->query('select visiteur.id as id, visiteur.nom as nom, visiteur.prenom as prenom 
+				from visiteur 
+				where visiteur.login=? and visiteur.mdp=?', [...])
+ 3 APPPATH\Models\Authentif.php(66): App\Models\DataAccess->getInfosVisiteur('lvillachane', 'jux7g')
+ 4 APPPATH\Controllers\Anonyme.php(33): App\Models\Authentif->authentifier('lvillachane', 'jux7g')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anonyme->seConnecter()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anonyme))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:40:43 --> mysqli_sql_exception: Unknown column 'non' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:40:43 --> Unknown column 'non' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = non
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = non
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = non
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:40:59 --> mysqli_sql_exception: Unknown column 'oui' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:40:59 --> Unknown column 'oui' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:41:11 --> mysqli_sql_exception: Unknown column 'oui' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:41:11 --> Unknown column 'oui' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:46:36 --> mysqli_sql_exception: Unknown column 'oui' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:46:36 --> Unknown column 'oui' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = oui
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:57:23 --> mysqli_sql_exception: Unknown column 'oiu' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:57:23 --> Unknown column 'oiu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = oiu
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = oiu
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = oiu
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 07:58:08 --> mysqli_sql_exception: Unknown column 'po' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 07:58:08 --> Unknown column 'po' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = po
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = po
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = po
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-06 08:04:51 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(42): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Visiteur.php(86): App\Controllers\Visiteur->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->modMaFiche('202212')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-06 08:05:07 --> Invalid file: errors/html/error_401.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_401.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_401', [], true)
+ 3 APPPATH\Controllers\Visiteur.php(42): view('errors/html/error_401')
+ 4 APPPATH\Controllers\Visiteur.php(49): App\Controllers\Visiteur->unauthorizedAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 08:42:23 --> mysqli_sql_exception: Unknown column '6qsd' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 08:42:23 --> Unknown column '6qsd' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = 6qsd
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = 6qsd
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = 6qsd
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 08:42:32 --> mysqli_sql_exception: Unknown column 'test' in 'field list' in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 08:42:32 --> Unknown column 'test' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = test 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = test 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = test 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'KM\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 08:52:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where lignefraisforfait.idvisiteur = 'a131' 
+						and lignefraisforfait.moi...' at line 3 in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 08:52:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where lignefraisforfait.idvisiteur = 'a131' 
+						and lignefraisforfait.moi...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-06 08:52:38 --> mktime() expects parameter 5 to be int, string given
+in APPPATH\Models\Tools.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mktime() expects parameter 5 to be int, string given', 'APPPATH\\Models\\Tools.php', 18, [...])
+ 2 APPPATH\Models\Tools.php(18): mktime(0, 0, 0, null, 'ROOTPATH\\public', null)
+ 3 APPPATH\Models\DataAccess.php(214): App\Models\Tools::dateFrancaisVersAnglais('ROOTPATH\\public')
+ 4 APPPATH\Models\ActionsVisiteur.php(110): App\Models\DataAccess->creeLigneHorsForfait('a131', '202212', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public')
+ 5 APPPATH\Controllers\Visiteur.php(130): App\Models\ActionsVisiteur->ajouteFrais('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->ajouteUneLigneDeFrais('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-06 08:53:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where lignefraisforfait.idvisiteur = 'a131' 
+						and lignefraisforfait.moi...' at line 3 in P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\MySQLi\Connection.php(292): mysqli->query('update lignefra...', 0)
+#1 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefra...')
+#2 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefra...')
+#3 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', Array)
+#4 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\app\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', Array)
+#5 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+#6 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+#7 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 P:\Documents\2eme annee\projet\2.AppliFrais\applifrais-CI4.2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-06 08:53:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'where lignefraisforfait.idvisiteur = 'a131' 
+						and lignefraisforfait.moi...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 3 APPPATH\Models\DataAccess.php(126): CodeIgniter\Database\BaseConnection->simpleQuery('update lignefraisforfait 
+					set lignefraisforfait.quantite = 
+					where lignefraisforfait.idvisiteur = \'a131\' 
+						and lignefraisforfait.mois = \'202212\'
+						and lignefraisforfait.idfraisforfait = \'ETP\'')
+ 4 APPPATH\Models\ActionsVisiteur.php(91): App\Models\DataAccess->majLignesForfait('a131', '202212', [...])
+ 5 APPPATH\Controllers\Visiteur.php(113): App\Models\ActionsVisiteur->majForfait('a131', '202212', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Visiteur->majForfait('202212')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Visiteur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
