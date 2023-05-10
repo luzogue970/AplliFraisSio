@@ -44,13 +44,14 @@ class Comptable extends BaseController {
     public function index() {
         if (!$this->checkAuth())
             return $this->unauthorizedAccess();
-        // envoie de la vue accueil du visiteur
+        // envoie de la vue accueil du Comptable
         $data['identite'] = $this->session->get('prenom') . ' ' . $this->session->get('nom');
 
         return view('v_comptable/v_comptableAccueil', $data);
     }
 
     public function lesFiches($message = "") {
+//        renvoie la vue permettant de voir tous les fiches signées pour le comptable
         if (!$this->checkAuth())
             return $this->unauthorizedAccess();
         $data['identite'] = $this->session->get('prenom') . ' ' . $this->session->get('nom');
@@ -75,20 +76,40 @@ class Comptable extends BaseController {
 
         return view('v_comptable/v_comptableVoirFiche', $data);
     }
-
+    
+    /**
+     * validerFiche
+     *
+     * @param  mixed $mois
+     * @param  mixed $idVisiteur
+     * @return void
+     */
     public function validerFiche($mois, $idVisiteur) { // TODO : contrôler la validité du second paramètre (mois de la fiche à modifier)
+//        peremt au comptable de valider la fiche
         if (!$this->checkAuth())
             return $this->unauthorizedAccess();
         $this->actComptable->validerFiche($idVisiteur, $mois);
 
-        // ... et on revient à mesFiches
+//        renvoie à à la vue LesFiches avec un message de confirmation
         return $this->lesFiches("La fiche $mois a été validée.");
     }
-
-    public function refuserFiche($mois,$idVisiteur,$comment) { // TODO : contrôler la validité du second paramètre (mois de la fiche à modifier)
+    
+    /**
+     * refuserFiche
+     *
+     * @param  mixed $mois
+     * @param  mixed $idVisiteur
+     * @param  mixed $comment
+     * @return void
+     */
+    public function refuserFiche($mois,$idVisiteur) { // TODO : contrôler la validité du second paramètre (mois de la fiche à modifier)
+//        permet au comptable de refuser les fiches avec un message
         if (!$this->checkAuth())
             return $this->unauthorizedAccess();
+        
+        		$comment = $this->request->getPost('comment');
         $this->actComptable->refuserFiche($idVisiteur,$mois,$comment);
+//        renvoie à à la vue LesFiches avec un message de confirmation
         return $this->lesFiches("La fiche $mois a été refusé pour le motif $comment");
     }
 

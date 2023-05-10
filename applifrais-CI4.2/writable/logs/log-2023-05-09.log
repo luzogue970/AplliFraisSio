@@ -17,3 +17,14 @@ in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 59.
  5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 11:13:17 --> Undefined array key "comment"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 28.
+ 1 APPPATH\Views\v_comptable\v_comptableLesFiches.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_comptable\\v_comptableLesFiches.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 5 APPPATH\Controllers\Comptable.php(61): view('v_comptable/V_comptableLesFiches', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

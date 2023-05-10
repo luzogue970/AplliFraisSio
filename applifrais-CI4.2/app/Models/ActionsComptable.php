@@ -73,11 +73,18 @@ class ActionsComptable extends Model {
 	*/
         
         public function validerFiche($idVisiteur,$mois)
-	{	// TODO : s'assurer que les paramètres reçus sont cohérents avec ceux mémorisés en session
-		// TODO : intégrer une fonctionnalité d'impression PDF de la fiche
+	{	// TODO : s'assurer que les paramètres reçus sont cohérents avec ceux mémorisés en sessionhe
 
 	    $this->dao->validerFicheFrais($idVisiteur, $mois);
-	}
+	}        
+        /**
+         * refuserFiche
+         *
+         * @param  mixed $idVisiteur
+         * @param  mixed $mois
+         * @param  mixed $comment
+         * @return void
+         */
         public function refuserFiche($idVisiteur,$mois,$comment)
 	{	// TODO : s'assurer que les paramètres reçus sont cohérents avec ceux mémorisés en session
 		// TODO : intégrer une fonctionnalité d'impression PDF de la fiche

@@ -24,6 +24,7 @@ class Authentif extends Model
 	}
         
         public function estComptable()
+//        fonction permettant de vérifier si l'utilisateur est comptable ou non
 	{
             
           if ($this->session->get('statut') == 1) {

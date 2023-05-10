@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/nouveauMathieu/dev/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/v_comptable/v_comptableLesFiches.php</file>
-            <file>file:/D:/nouveauMathieu/dev/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Models/ActionsComptable.php</file>
-            <file>file:/D:/nouveauMathieu/dev/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/v_comptable/v_comptableVoirFiche.php</file>
-            <file>file:/D:/nouveauMathieu/dev/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Controllers/Comptable.php</file>
-            <file>file:/D:/nouveauMathieu/dev/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Models/DataAccess.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/v_comptable/v_comptableVoirFiche.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/v_comptable/v_comptableLesFiches.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/l_connexion.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Controllers/Anonyme.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Controllers/Comptable.php</file>
+            <file>file:/D:/nouveauMathieu/dev/Examen%20BTS/APSLAM/2.AppliFrais/AplliFraisSio-main/applifrais-CI4.2/app/Views/v_connexion.php</file>
         </group>
     </open-files>
 </project-private>

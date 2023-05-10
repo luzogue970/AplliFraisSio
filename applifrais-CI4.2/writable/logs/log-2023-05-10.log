@@ -1,0 +1,39 @@
+CRITICAL - 2023-05-10 09:19:32 --> syntax error, unexpected single-quoted string " ?>">", expecting "," or ";"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 60.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 3 APPPATH\Controllers\Comptable.php(61): view('v_comptable/V_comptableLesFiches', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 09:26:31 --> syntax error, unexpected identifier "q", expecting "," or ";"
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 54.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 3 APPPATH\Controllers\Comptable.php(61): view('v_comptable/V_comptableLesFiches', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 09:31:27 --> Unclosed '{' on line 22
+in APPPATH\Views\v_comptable\v_comptableLesFiches.php on line 67.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('v_comptable/V_comptableLesFiches', [], true)
+ 3 APPPATH\Controllers\Comptable.php(61): view('v_comptable/V_comptableLesFiches', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->lesFiches()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 09:32:36 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 0 passed in D:\nouveauMathieu\dev\Examen BTS\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 3 expected
+in APPPATH\Controllers\Comptable.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 09:34:43 --> Too few arguments to function App\Controllers\Comptable::refuserFiche(), 0 passed in D:\nouveauMathieu\dev\Examen BTS\APSLAM\2.AppliFrais\AplliFraisSio-main\applifrais-CI4.2\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\Comptable.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Comptable->refuserFiche()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comptable))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -13,6 +13,7 @@ class Anonyme extends BaseController
 			$data = array();
 			return view('v_connexion', $data);
 		}
+//                vérification du statut de l'utilisateur : comptable ou non
                 else if ($authentif->estComptable() == true) {
                     return redirect()->to('/Comptable');
                 }

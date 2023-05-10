@@ -20,40 +20,38 @@
 
             <?php
             foreach ($lesFiches as $uneFiche) {
-            $comment = '';
-            $valideLink = '';
-            $refuseLink = '';
+//                création de $comment qui recevra le commentaire 
+                $comment = '';
+                //permet d'attendre que la requête soit envoyé pour donner sa valeur à commentaire
+                if (isset($_POST['comment'])) {
+                    $comment = $_POST['comment'];
+                }
+                $valideLink = '';
+                $refuseLink = '';
 
-            if (isset($_POST['comment'])) {
-            $comment = $_POST['comment'];
-            }
-            
-            
-
-            if ($uneFiche['id'] == 'CL') {
-            // modification de signelink en valideLink avec un apramètre idVisiteur en plus.
-            $valideLink = anchor('comptable/validerFiche/' . $uneFiche['mois'] . '/' . $uneFiche['idVisiteur'], 'valider', 'title="valider la fiche"');
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $refuseLink = anchor('comptable/refuserFiche/' . $uneFiche['mois'] . '/' . $uneFiche['idVisiteur'] . '/' . $comment, 'refuser', 'title="refuser la fiche"');
-            }
-            }
-
-            echo
-            '<tr>
+//            n'affiches les deux boutons seulement si la l'id de la fiche est CL
+                if ($uneFiche['id'] == 'CL') {
+                    // création de valideLink qui permet de valider la fiche d'un utilisateur.
+                    $valideLink = anchor('comptable/validerFiche/' . $uneFiche['mois'] . '/' . $uneFiche['idVisiteur'], 'valider', 'title="valider la fiche"');
+                }
+                echo
+                '<tr>
 					<td class="date">' . anchor('comptable/voirLaFiche/' . $uneFiche['mois'], $uneFiche['mois'], 'title="Consulter la fiche"') . '</td>
-					<td class="idVisiteur">' . $uneFiche['idVisiteur'] . '</td>
+					' . /* Ajout d'une ligne id_visiteur pour plsu de lisibilité pour le comtpable */'
+                                        <td class="idVisiteur">' . $uneFiche['idVisiteur'] . '</td>
                                         <td class="libelle">' . $uneFiche['libelle'] . '</td>
 					<td class="montant">' . $uneFiche['montantValide'] . '</td>
 					<td class="date">' . $uneFiche['dateModif'] . '</td>
 					<td class="action">' . $valideLink . '</td>
-                                        <td class="action">' .  $refuseLink . ' </br>'
-            . '<form id="refuseForm_" method="post">
-                                       <p>Commentaire : <input type="text" name="comment" required/></p>
-                                       <p><input type="submit" value="valider Commentaire"></p>
-                                       </form></td>
-                                            </tr>';
-            }
-            ?>	  
+                                        <td class="action">' . $refuseLink . ' </br>';
+                ?>
+                <!--/*form permettant de mettre un commentaire de l'envoyer par la méthode post*/-->
+            <form method="post" action="<?= site_url() . 'comptable/refuserFiche/' . $uneFiche['mois'] . '/' . $uneFiche['idVisiteur'] ?>">
+                <p>Commentaire : <input type="text" name="comment" required/></p>
+                <p><input type="submit" value="valider Commentaire"></p>
+            </form></td>
+            </tr>
+        <?php } ?>
         </tbody>
     </table>
 

@@ -218,10 +218,16 @@ class DataAccess extends Model {
 	}
 		
 	/**
-	 * Supprime le frais hors forfait dont l'id est passé en argument
+	 * 
 	 * 
 	 * @param $idFrais 
-	*/
+	*/	
+	/**
+	 * supprimerLigneHorsForfait : Supprime le frais hors forfait dont l'id est passé en argument
+	 *
+	 * @param  mixed $idFrais
+	 * @return void
+	 */
 	public function supprimerLigneHorsForfait($idFrais){
 		$req = "delete from lignefraishorsforfait 
 				where lignefraishorsforfait.id =$idFrais ";
@@ -348,7 +354,14 @@ class DataAccess extends Model {
 	}
         
         //Data access du module comptable
-        
+                
+        /**
+         * getFichesComptable
+		 * 
+         *requête permettant d'afficher toutes le fiches signées.
+		* Le trie par utilisateur nativement prit en compte dans la requête
+         * @return void
+         */
         public function getFichesComptable () {
 		$req = "select idVisiteur, mois, montantValide, dateModif, id, libelle
 				from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
@@ -358,26 +371,51 @@ class DataAccess extends Model {
 		$lesFiches = $rs->getResultArray();
 		return $lesFiches;
 	}
-        
+                
+        /**
+         * validerFicheFrais
+         * validation de la fiche frais avec vérification que le code est bien a CL avant de d'être update a VA
+         *
+         * @param  mixed $idVisiteur
+         * @param  mixed $mois
+         * @return void
+         */
         public function validerFicheFrais($idVisiteur,$mois){
-                // validation de la fiche frais avec code fiche frais en changeant CR en CL et CL en VA
 		$laFiche = $this->getLesInfosFicheFrais($idVisiteur,$mois);
 		if($laFiche['idEtat']=='CL'){
 		$this->majEtatFicheFrais($idVisiteur, $mois,'VA');  
 		}
 	}
-        
+                
+        /**
+         * refuserFicheFrais
+         * refus de la fiche frais avec vérification que le code est bien a CL avant de d'être update a RE
+		 * 
+         * @param  mixed $idVisiteur
+         * @param  mixed $mois
+         * @param  mixed $comment
+         * @return void
+         */
         public function refuserFicheFrais($idVisiteur,$mois,$comment){
-                // validation de la fiche frais avec code fiche frais en changeant CR en CL et CL en VA
 		$laFiche = $this->getLesInfosFicheFrais($idVisiteur,$mois);
 		if($laFiche['idEtat']=='CL'){
 		$this->majEtatFicheFrais($idVisiteur, $mois,'RE');  
+//                utilisation de addComment afin d'ajouter un commentaire
                 $this->addComment($idVisiteur, $mois,$comment);  
 
 		}
 	}
         
-        
+                
+        /**
+         * addComment
+		 * fonction servant à ajouter un commentaire pour motiver le refus d'une fiche
+         *
+         * @param  mixed $idVisiteur
+         * @param  mixed $mois
+         * @param  mixed $comment
+         * @return void
+         */
         public function addComment($idVisiteur,$mois,$comment){
 		$req = "update ficheFrais 
 				set comment = '$comment', dateModif = now() 
