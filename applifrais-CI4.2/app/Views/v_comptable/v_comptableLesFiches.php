@@ -43,12 +43,11 @@
 					<td class="montant">' . $uneFiche['montantValide'] . '</td>
 					<td class="date">' . $uneFiche['dateModif'] . '</td>
 					<td class="action">' . $valideLink . '</td>
-                                        <td class="action">' . $refuseLink . ' </br>';
-                ?>
-                <!--/*form permettant de mettre un commentaire de l'envoyer par la méthode post*/-->
+                                        <td class="action">' . $refuseLink . ' </br>';?>
+                <!--/*form permettant de mettre un commentaire de l'envoyer par la méthode post + execution de refuserfiche*/-->
             <form method="post" action="<?= site_url() . 'comptable/refuserFiche/' . $uneFiche['mois'] . '/' . $uneFiche['idVisiteur'] ?>">
                 <p>Commentaire : <input type="text" name="comment" required/></p>
-                <p><input type="submit" value="valider Commentaire"></p>
+                <p><input type="submit" value="refuser"></p>
             </form></td>
             </tr>
         <?php } ?>
